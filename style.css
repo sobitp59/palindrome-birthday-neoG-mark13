@@ -5,8 +5,230 @@
     box-sizing: border-box;
     font-family: 'Fredoka', sans-serif;
 }
-
-.container{
-    width: 60%;
+body{
+    background-color: rgb(12, 1, 27);
+}
+html{
+    scroll-behavior: smooth;
+}
+.container1{
+    width: 90%;
+    min-height: 100vh;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.heading1{
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 6.8rem;
+    margin: 0.6rem;
+    font-weight: 600;
+    border-radius: 10rem;
+    text-align: start;
+}
+h1 span{
+    background: rgb(225,223,255);
+    background: linear-gradient(144deg, rgba(225,223,255,1) 0%, rgba(255,136,0,1) 0%, rgba(255,81,0,1) 100%);
+    color: white;
+    padding: 0rem 0.6rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    border: 0.5px solid white;
+}
+
+.heading2{
+    /* color: white; */
+    text-align: start; 
+    font-size: 1.8rem;
+    background: -webkit-linear-gradient(#ff8800, #ff5100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.pal-mean{
+    text-align: end;
+    color: white;
+    font-size: 1.5rem;
+}
+.check-out-link{
+    background: rgb(225,223,255);
+    background: linear-gradient(144deg, rgba(225,223,255,1) 0%, rgba(255,136,0,1) 0%, rgba(255,81,0,1) 100%);
+    padding: 1rem 4rem;
+    border-radius: 5rem;
+    text-align: start;
+    margin-top: 2.5rem;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+.container2{
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    background-color: white;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading-bottom{
+    color: rgb(12, 1, 27);
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+.heading-bottom span{
+    background: -webkit-linear-gradient(#ff8800, #ff5100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 3px dashed rgb(12, 1, 27);
+}
+
+input{
+    width: 60%;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(12, 1, 27);
+    color: rgb(12, 1, 27);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#show-button{
+    margin-top: 2rem;
+    width: 15rem;
+    padding: 1.7rem;
+    border-radius: 5rem;
+    border: none;
+    background: rgb(225,223,255);
+    background: linear-gradient(144deg, rgba(225,223,255,1) 0%, rgba(255,136,0,1) 0%, rgba(255,81,0,1) 100%);
+    color: white;
+    font-size: 1.2rem;
+    border: 2px solid white;
+
+    -webkit-box-shadow: 0px 9px 26px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 9px 26px -12px rgba(0,0,0,0.75);
+box-shadow: 0px 9px 26px -12px rgba(0,0,0,0.75);
+
+}
+
+#show-output{
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(12, 1, 27);
+}
+
+.bottom{
+    border-top: 2px dashed rgb(12, 1, 27);
+    width: 70%;
+    margin: auto;
+    position: sticky;
+    top: 100%;
+    padding: 1.5rem 0;
+}
+.b-header{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.b-desc{
+    margin-bottom: 1rem;
+    color: rgb(12, 1, 27);
+}
+
+.socials{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: rgb(12, 1, 27);
+}
+
+.socials a:hover{
+    background: -webkit-linear-gradient(#ff8800, #ff5100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.2s all ease-in-out;
+}
+
+
+@media (max-width : 478px){
+    .container1, .container2{
+        width: 95%;
+    }
+
+    .heading1{
+        font-size: 3rem;
+    }
+
+    .heading2{
+        font-size: 1rem;
+    }
+    
+    .pal-mean{
+        font-size: 1rem;
+        text-align: start;
+    }
+
+    .heading-bottom{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    input{
+        width: 90%;
+        padding: 1.8rem;
+    }
+
+    #show-button{
+        width: 90%;
+    }
+    
+    #show-output{
+        margin: 2.5rem 0.5rem;
+        font-size: 1rem;
+    
+    }
+    .bottom{
+        width: 90%;
+    }
+
+    .b-header{
+       
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .b-desc{
+       font-size: 0.7rem;
+    }
+
+    .socials{
+        width: 90%;
+    }
+    .socials a{
+        font-size: 0.9rem;
+    }
 }

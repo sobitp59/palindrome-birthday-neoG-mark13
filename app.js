@@ -208,15 +208,18 @@ function showOnClick(){
     let isPalindrome = checkPalindromeForAllDateFormats(date);
     
     if(isPalindrome){
-      showOutput.textContent = `Yay! your birthday is palindrome`;
+      showOutput.textContent = 'Processing...';
+      setTimeout(()=>{showOutput.textContent = `Bingo! Your birthday is a Palindrome 🎂`},2000) ;
     }else{
       let [daysCounter1, nextDate] = nextPalindromeDateIs(date);
       let [daysCounter2, prevDate] = previousPalindromeDateIs(date);
       
       if(daysCounter1 > daysCounter2){
-        showOutput.textContent = `nearest palindrome is ${prevDate.day}-${prevDate.month}-${prevDate.year}. You missed it by ${daysCounter2} ${dayOrDays(daysCounter2)}`;
-      }else{
-        showOutput.textContent = `nearest palindrome is ${nextDate.day}-${nextDate.month}-${nextDate.year}. You missed it by ${daysCounter1} ${dayOrDays(daysCounter1)}`;
+        showOutput.textContent = 'Processing...';
+        setTimeout(()=>{showOutput.textContent = `Your birthday is not palindrome 🎈. Nearest palindrome date is ${prevDate.day}-${prevDate.month}-${prevDate.year}. You missed it by ${daysCounter2} ${dayOrDays(daysCounter2)}.`}, 2000);
+        }else{
+        showOutput.textContent = 'Processing...'
+        setTimeout(()=>{showOutput.textContent = `Your birthday is not palindrome 🎈. Nearest palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}. You missed it by ${daysCounter1} ${dayOrDays(daysCounter1)}.`}, 2000);
       }
     }
 
@@ -228,3 +231,4 @@ function dayOrDays(daysNumber){
   let moreThanOneDay = 'days';
   return daysNumber === 1 ? oneDay : moreThanOneDay;
 }
+
