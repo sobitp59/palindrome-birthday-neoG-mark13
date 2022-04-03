@@ -190,8 +190,9 @@ box-shadow: 0px 9px 26px -12px rgba(0,0,0,0.75);
     }
     
     .pal-mean{
-        font-size: 1rem;
-        text-align: start;
+        margin: 0 0.8rem;
+        font-size: 0.9rem;
+        text-align: center;
     }
 
     .heading-bottom{
